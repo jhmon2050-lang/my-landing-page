@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김지현 | 전기 엔지니어링 전문가</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { background: #fff; }
+
+    body {
+      font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+
+    /* ── Header ── */
+    .header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .profile-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #1F3864;
+      display: block;
+      margin: 0 auto 18px;
+    }
+
+    .headline {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1F3864;
+      line-height: 1.3;
+      word-break: keep-all;
+      margin-bottom: 14px;
+      background: #fff;
+    }
+
+    /* ── Bio ── */
+    .bio {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.85;
+      padding: 22px 0;
+      border-top: 2px solid #1F3864;
+      border-bottom: 1px solid #333;
+      margin-bottom: 32px;
+      word-break: keep-all;
+    }
+
+    /* ── Career ── */
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #1F3864;
+      letter-spacing: 0.12em;
+      margin-bottom: 12px;
+    }
+
+    .career-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .career-card {
+      border-left: 4px solid #1F3864;
+      padding: 12px 16px;
+    }
+
+    .career-period {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #1F3864;
+      margin-bottom: 2px;
+    }
+
+    .career-company {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .career-role {
+      font-size: 0.88rem;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .career-desc {
+      font-size: 0.85rem;
+      color: #333;
+      line-height: 1.5;
+      word-break: keep-all;
+    }
+
+    /* ── Buttons ── */
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border: 2px solid #1F3864;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: #1F3864;
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: #1F3864;
+    }
+
+    /* ── Toast ── */
+    .toast {
+      position: fixed;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #333;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 24px;
+      font-size: 0.88rem;
+      transition: transform 0.25s ease;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <img
+      class="profile-photo"
+      src="profile.jpg"
+      alt="김지현 프로필 사진"
+      onerror="this.style.display='none'"
+    >
+    <p class="headline">민세일 · 부장 · 한국전기엔지니어링</p>
+    <button class="btn btn-secondary" onclick="copyPhone()">전화 걸기</button>
+  </header>
+
+  <p class="bio">
+    전기 엔지니어로 25년간 산업용 수배전 설비 설계부터 변전소 감리까지
+    전력 인프라 전 과정을 직접 수행해 왔습니다. 현재는 중대형 프로젝트를
+    총괄하는 설계팀장으로서 안전하고 효율적인 전력 시스템 구축에 힘쓰고 있습니다.
+    업계 세미나 연사 및 사내 기술 교육 강사로도 활동 중입니다.
+  </p>
+
+  <p class="section-label">주요 경력</p>
+  <div class="career-list">
+
+    <div class="career-card">
+      <div class="career-period">2020 – 현재</div>
+      <div class="career-company">한국전기엔지니어링㈜</div>
+      <div class="career-role">부장 · 설계팀장</div>
+      <div class="career-desc">중대형 산업용 배전반·수배전 설비 설계 프로젝트 총괄 및 팀 운영</div>
+    </div>
+
+    <div class="career-card">
+      <div class="career-period">2012 – 2020</div>
+      <div class="career-company">대한전력기술㈜</div>
+      <div class="career-role">차장 · 전력시스템팀</div>
+      <div class="career-desc">154kV 변전소 설계·감리 다수 수행 및 스마트 배전 시스템 도입 주도</div>
+    </div>
+
+    <div class="career-card">
+      <div class="career-period">2001 – 2012</div>
+      <div class="career-company">성원전기㈜</div>
+      <div class="career-role">과장 · 시공관리팀</div>
+      <div class="career-desc">고압 케이블 포설·접속 공사 현장 관리 및 전기설비 설계·시공 감독</div>
+    </div>
+
+  </div>
+
+  <p class="section-label">수상 경력</p>
+  <div class="career-list">
+
+    <div class="career-card">
+      <div class="career-period">2022</div>
+      <div class="career-company">OO협회</div>
+      <div class="career-desc">우수기술상</div>
+    </div>
+
+  </div>
+
+  <div class="contact">
+    <a class="btn btn-primary" href="mailto:jhmon2050@gmail.com">이메일 보내기</a>
+  </div>
+
+  <div class="toast" id="toast">전화번호가 클립보드에 복사되었습니다.</div>
+
+  <script>
+    var PHONE = '010-0000-0000'; // 실제 번호로 교체하세요
+
+    function copyPhone() {
+      navigator.clipboard.writeText(PHONE).then(function() {
+        showToast();
+      }).catch(function() {
+        // clipboard API 미지원 환경 fallback
+        var dummy = document.createElement('textarea');
+        dummy.value = PHONE;
+        document.body.appendChild(dummy);
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        showToast();
+      });
+    }
+
+    function showToast() {
+      var t = document.getElementById('toast');
+      t.classList.add('show');
+      setTimeout(function() { t.classList.remove('show'); }, 2500);
+    }
+  </script>
+
+</body>
+</html>
