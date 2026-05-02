@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>김지현 | 전기 엔지니어링 전문가</title>
+  <title>민세일 | 비즈니스 마케터</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -26,8 +26,8 @@
     }
 
     .profile-photo {
-      width: 100px;
-      height: 100px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #1F3864;
@@ -45,27 +45,22 @@
       background: #fff;
     }
 
-    /* ── Bio ── */
-    .bio {
-      font-size: 1rem;
-      color: #333;
-      line-height: 1.85;
-      padding: 22px 0;
-      border-top: 2px solid #1F3864;
-      border-bottom: 1px solid #333;
-      margin-bottom: 32px;
-      word-break: keep-all;
+    .contact-info {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 6px;
     }
 
-    /* ── Career ── */
+    /* ── Section ── */
     .section-label {
-      font-size: 0.75rem;
+      font-size: 1rem;
       font-weight: 700;
       color: #1F3864;
       letter-spacing: 0.12em;
       margin-bottom: 12px;
     }
 
+    /* ── Career ── */
     .career-list {
       display: flex;
       flex-direction: column;
@@ -79,7 +74,7 @@
     }
 
     .career-period {
-      font-size: 0.78rem;
+      font-size: 1rem;
       font-weight: 700;
       color: #1F3864;
       margin-bottom: 2px;
@@ -92,16 +87,50 @@
     }
 
     .career-role {
-      font-size: 0.88rem;
+      font-size: 1rem;
       color: #333;
       margin-bottom: 4px;
     }
 
     .career-desc {
-      font-size: 0.85rem;
+      font-size: 1rem;
       color: #333;
       line-height: 1.5;
       word-break: keep-all;
+    }
+
+    .career-desc ul {
+      padding-left: 16px;
+      margin-top: 4px;
+    }
+
+    .career-desc li {
+      margin-bottom: 2px;
+    }
+
+    /* ── Skills ── */
+    .skill-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .skill-card {
+      border-left: 4px solid #1F3864;
+      padding: 12px 16px;
+    }
+
+    .skill-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 2px;
+    }
+
+    .skill-desc {
+      font-size: 1rem;
+      color: #555;
     }
 
     /* ── Buttons ── */
@@ -154,6 +183,14 @@
     .toast.show {
       transform: translateX(-50%) translateY(0);
     }
+
+    /* ── Footer ── */
+    .footer {
+      margin-top: 48px;
+      text-align: center;
+      font-size: 0.78rem;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
@@ -161,72 +198,93 @@
   <header class="header">
     <img
       class="profile-photo"
-      src="profile.jpg"
-      alt="김지현 프로필 사진"
+      src="profile.png"
+      alt="민세일 프로필 사진"
       onerror="this.style.display='none'"
     >
-    <p class="headline">민세일 · 부장 · 한국전기엔지니어링</p>
-    <button class="btn btn-secondary" onclick="copyPhone()">전화 걸기</button>
+    <p class="headline">민세일 비즈니스 마케터</p>
+    <p class="contact-info">연락처 010-1234-5678</p>
+    <p class="contact-info">이메일 info@naver.com</p>
   </header>
-
-  <p class="bio">
-    전기 엔지니어로 25년간 산업용 수배전 설비 설계부터 변전소 감리까지
-    전력 인프라 전 과정을 직접 수행해 왔습니다. 현재는 중대형 프로젝트를
-    총괄하는 설계팀장으로서 안전하고 효율적인 전력 시스템 구축에 힘쓰고 있습니다.
-    업계 세미나 연사 및 사내 기술 교육 강사로도 활동 중입니다.
-  </p>
 
   <p class="section-label">주요 경력</p>
   <div class="career-list">
 
     <div class="career-card">
-      <div class="career-period">2020 – 현재</div>
-      <div class="career-company">한국전기엔지니어링㈜</div>
-      <div class="career-role">부장 · 설계팀장</div>
-      <div class="career-desc">중대형 산업용 배전반·수배전 설비 설계 프로젝트 총괄 및 팀 운영</div>
+      <div class="career-period">1998 – 2025</div>
+      <div class="career-company">한국통신부</div>
+      <div class="career-role">정책관 · 세종시</div>
+      <div class="career-desc">
+        <ul>
+          <li>정부기관 고속통신망 구축 정책 수립</li>
+          <li>정부기관 암호통신망 구축 정책 수립</li>
+        </ul>
+      </div>
     </div>
 
     <div class="career-card">
-      <div class="career-period">2012 – 2020</div>
-      <div class="career-company">대한전력기술㈜</div>
-      <div class="career-role">차장 · 전력시스템팀</div>
-      <div class="career-desc">154kV 변전소 설계·감리 다수 수행 및 스마트 배전 시스템 도입 주도</div>
-    </div>
-
-    <div class="career-card">
-      <div class="career-period">2001 – 2012</div>
-      <div class="career-company">성원전기㈜</div>
-      <div class="career-role">과장 · 시공관리팀</div>
-      <div class="career-desc">고압 케이블 포설·접속 공사 현장 관리 및 전기설비 설계·시공 감독</div>
+      <div class="career-period">1988 – 1997</div>
+      <div class="career-company">한국전자</div>
+      <div class="career-role">연구원 · 서울시 강남구 테헤란로</div>
+      <div class="career-desc">
+        <ul>
+          <li>전전자교환기 개발</li>
+          <li>이동통신시스템 개발</li>
+          <li>인터넷 네트워크 장비 개발</li>
+        </ul>
+      </div>
     </div>
 
   </div>
 
-  <p class="section-label">수상 경력</p>
+  <p class="section-label">학력</p>
   <div class="career-list">
 
     <div class="career-card">
-      <div class="career-period">2022</div>
-      <div class="career-company">OO협회</div>
-      <div class="career-desc">우수기술상</div>
+      <div class="career-period">1986 – 1988</div>
+      <div class="career-company">한국대학교</div>
+      <div class="career-role">전자공학과 석사 · 서울시</div>
+    </div>
+
+    <div class="career-card">
+      <div class="career-period">1982 – 1986</div>
+      <div class="career-company">한국대학교</div>
+      <div class="career-role">전자공학과 학사 · 서울시</div>
+    </div>
+
+  </div>
+
+  <p class="section-label">전문 분야</p>
+  <div class="skill-list">
+
+    <div class="skill-card">
+      <div class="skill-title">통신시스템 개발</div>
+      <div class="skill-desc">전전자교환기 · 이동통신시스템 · 인터넷 네트워크 장비</div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-title">정부기관 통신망 정책 수립</div>
+      <div class="skill-desc">고속통신망 · 암호통신망</div>
     </div>
 
   </div>
 
   <div class="contact">
-    <a class="btn btn-primary" href="mailto:jhmon2050@gmail.com">이메일 보내기</a>
+    <button class="btn btn-primary" onclick="copyPhone()">전화 걸기</button>
+    <a class="btn btn-primary" href="mailto:info@naver.com">이메일 보내기</a>
   </div>
+
+  <div class="footer">© 2035 by 민세일</div>
 
   <div class="toast" id="toast">전화번호가 클립보드에 복사되었습니다.</div>
 
   <script>
-    var PHONE = '010-0000-0000'; // 실제 번호로 교체하세요
+    var PHONE = '010-1234-5678';
 
     function copyPhone() {
       navigator.clipboard.writeText(PHONE).then(function() {
         showToast();
       }).catch(function() {
-        // clipboard API 미지원 환경 fallback
         var dummy = document.createElement('textarea');
         dummy.value = PHONE;
         document.body.appendChild(dummy);
