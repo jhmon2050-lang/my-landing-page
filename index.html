@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>민세일 | 비즈니스 마케터</title>
+  <title>민세일 | 소상공인 AI 컨설턴트</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -202,18 +202,30 @@
       alt="민세일 프로필 사진"
       onerror="this.style.display='none'"
     >
-    <p class="headline">민세일 비즈니스 마케터</p>
-    <p class="contact-info">연락처 010-1234-5678</p>
-    <p class="contact-info">이메일 info@naver.com</p>
+    <p class="headline">민세일 소상공인 AI 컨설턴트</p>
+    <p class="contact-info">이메일 jhmin2050@naver.com</p>
   </header>
 
   <p class="section-label">주요 경력</p>
   <div class="career-list">
 
     <div class="career-card">
+      <div class="career-period">2026 – 현재</div>
+      <div class="career-company">소상공인 업체</div>
+      <div class="career-role">SNS 콘텐츠 자동화 프로그램 개발</div>
+      <div class="career-desc">
+        <ul>
+          <li>AI 기반 SNS 콘텐츠 생성·발행 프로그램 개발</li>
+          <li>인스타그램 자동 발행 및 AI 문구·썸네일 생성</li>
+          <li>배포 패키지 및 사용자 매뉴얼 제작</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="career-card">
       <div class="career-period">1998 – 2025</div>
-      <div class="career-company">한국통신부</div>
-      <div class="career-role">정책관 · 세종시</div>
+      <div class="career-company">과학정보통신부</div>
+      <div class="career-role">정보통신정책실 · 세종시</div>
       <div class="career-desc">
         <ul>
           <li>정부기관 고속통신망 구축 정책 수립</li>
@@ -224,8 +236,8 @@
 
     <div class="career-card">
       <div class="career-period">1988 – 1997</div>
-      <div class="career-company">한국전자</div>
-      <div class="career-role">연구원 · 서울시 강남구 테헤란로</div>
+      <div class="career-company">삼성전자</div>
+      <div class="career-role">정보통신개발단 · 서울시 강남구 테헤란로</div>
       <div class="career-desc">
         <ul>
           <li>전전자교환기 개발</li>
@@ -237,25 +249,13 @@
 
   </div>
 
-  <p class="section-label">학력</p>
-  <div class="career-list">
-
-    <div class="career-card">
-      <div class="career-period">1986 – 1988</div>
-      <div class="career-company">한국대학교</div>
-      <div class="career-role">전자공학과 석사 · 서울시</div>
-    </div>
-
-    <div class="career-card">
-      <div class="career-period">1982 – 1986</div>
-      <div class="career-company">한국대학교</div>
-      <div class="career-role">전자공학과 학사 · 서울시</div>
-    </div>
-
-  </div>
-
   <p class="section-label">전문 분야</p>
   <div class="skill-list">
+
+    <div class="skill-card">
+      <div class="skill-title">소상공인 AI 컨설턴트</div>
+      <div class="skill-desc">AI 기반 SNS 콘텐츠 자동화 · 마케팅 실무 지원 · 맞춤형 프로그램 개발·납품</div>
+    </div>
 
     <div class="skill-card">
       <div class="skill-title">통신시스템 개발</div>
@@ -270,37 +270,10 @@
   </div>
 
   <div class="contact">
-    <button class="btn btn-primary" onclick="copyPhone()">전화 걸기</button>
-    <a class="btn btn-primary" href="mailto:info@naver.com">이메일 보내기</a>
+    <a class="btn btn-primary" href="mailto:jhmin2050@naver.com">이메일 보내기</a>
   </div>
 
   <div class="footer">© 2035 by 민세일</div>
-
-  <div class="toast" id="toast">전화번호가 클립보드에 복사되었습니다.</div>
-
-  <script>
-    var PHONE = '010-1234-5678';
-
-    function copyPhone() {
-      navigator.clipboard.writeText(PHONE).then(function() {
-        showToast();
-      }).catch(function() {
-        var dummy = document.createElement('textarea');
-        dummy.value = PHONE;
-        document.body.appendChild(dummy);
-        dummy.select();
-        document.execCommand('copy');
-        document.body.removeChild(dummy);
-        showToast();
-      });
-    }
-
-    function showToast() {
-      var t = document.getElementById('toast');
-      t.classList.add('show');
-      setTimeout(function() { t.classList.remove('show'); }, 2500);
-    }
-  </script>
 
 </body>
 </html>
